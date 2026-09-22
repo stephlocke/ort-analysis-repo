@@ -1,0 +1,25 @@
+excludes:
+  paths:
+    - pattern: "**/src/*/test/**"
+      reason: "TEST_OF"
+      comment: "Unit test files"
+    - pattern: "**/tests/**"
+      reason: "TEST_OF"
+      comment: "Test suite files"
+    - pattern: "**/spec/**"
+      reason: "TEST_OF"
+      comment: "Specification/test files"
+    - pattern: "**/.test/**"
+      reason: "TEST_OF"
+      comment: "Hidden test directories"
+    - pattern: "*/package-managers/cocoapods/**"
+      reason: "TEST_TOOL_OF"
+      comment: "Conflicting OTP project test assets"
+    - pattern: "**/*test-launcher*/**"
+      reason: "TEST_TOOL_OF"
+      comment: "Test launcher tooling, not part of the released project"
+
+analyzer:
+  skip_excluded: true
+  disabled_package_managers:
+    - Rebar3
